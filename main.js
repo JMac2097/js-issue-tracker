@@ -2,9 +2,9 @@ document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
 
 function fetchIssues() {
     var issues = JSON.parse(localStorage.getItem('issues'));
-    var issueList = document.getElementById('issueList');
+    var issuesList = document.getElementById('issuesList');
 
-    issueList.innerHTML = ' ';
+    issuesList.innerHTML = ' ';
 
     for (var i = 0; i < issues.length; i++) {
         var id = issues[i].id;
@@ -14,7 +14,7 @@ function fetchIssues() {
         var status = issues[i].status;
     };
 
-    issueList.innerHTML += '<div class="well">' +
+    issuesList.innerHTML += '<div class="well">' +
                             '<h6>Issue ID: ' + id + '</h6>' +
                             '<p><span class="label label-info">' + status + '</span></p>'
                             +
